@@ -1,0 +1,146 @@
+#contact {
+	background-image: url('../../../img/contact/contact-bg.svg'),
+		url('../../../img/contact/contact-bg-two.svg');
+	background-repeat: no-repeat;
+	background-position: left top, right bottom;
+	padding-bottom: 120px;
+}
+
+.contact__container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.contact__title {
+	font-weight: 700;
+	font-size: 64px;
+	line-height: 100px;
+	color: #ffffff;
+	margin-bottom: 16px;
+}
+
+.contact__subtitle {
+	font-weight: 700;
+	font-size: 32px;
+	line-height: 48px;
+	color: #f67e7e;
+	margin-bottom: 32px;
+}
+
+.contact__item {
+	align-items: center;
+	display: flex;
+	&::before {
+		content: '';
+		width: 72px;
+		height: 72px;
+		margin-right: 23px;
+		background: url('../../../img/contact/list-img.svg') no-repeat;
+		background-position: center;
+		display: inline-block;
+	}
+}
+
+.contact_item__title {
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 28px;
+	color: #ffffff;
+}
+
+// ///////////////////////////////
+
+.inputs {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.input {
+	width: 100%;
+	display: block;
+	background: transparent;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 14px;
+	border: none;
+	border-bottom: 1px solid #fff;
+	outline: none;
+	&:focus {
+		letter-spacing: -0.115385px;
+		color: #f67e7e;
+		border-bottom: 1px solid #f67e7e;
+		&::placeholder {
+			color: #f67e7e;
+		}
+	}
+	&::placeholder {
+		font-size: 15px;
+		line-height: 25px;
+		letter-spacing: -0.115385px;
+		color: #ffffff;
+		mix-blend-mode: normal;
+		opacity: 0.6;
+	}
+}
+
+.contact__message {
+	resize: none;
+	padding-bottom: 58px;
+	&::placeholder {
+		font-size: 15px;
+		line-height: 25px;
+		letter-spacing: -0.115385px;
+		color: #ffffff;
+		mix-blend-mode: normal;
+		opacity: 0.6;
+	}
+}
+.contact__col-right{
+	flex-grow: 1;
+}
+
+.contact__btn {
+	background: #ffffff;
+	border: 2px solid #ffffff;
+	border-radius: 24px;
+	padding: 10px 32px;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 28px;
+	color: #004047;
+	margin-top: 24px;
+}
+
+.input__section {
+	width: 100%;
+}
+
+@media only screen and (max-width: 1365px) {
+	.contact__container {
+		flex-direction: column;
+		padding-left: 127px;
+		padding-right: 126px;
+	}
+
+	.contact__col-left {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.contact__col-right {
+		max-width: 542px;
+	}
+
+	.contact__title {
+		text-align: center;
+	}
+
+	.contact__subtitle {
+		text-align: center;
+	}
+
+	.contact__col-right {
+		margin-top: 64px;
+	}
+}

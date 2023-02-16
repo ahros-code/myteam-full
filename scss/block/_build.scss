@@ -1,0 +1,148 @@
+#build {
+	background-color: #012f34;
+	padding-top: 198px;
+	padding-bottom: 140px;
+	position: relative;
+	background-image: url('../../img/build-img-one.svg');
+	background-repeat: no-repeat;
+	background-position: right bottom;
+}
+
+.build__container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.build__col-left {
+	max-width: 445px;
+}
+
+.build__title {
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 48px;
+	color: #ffffff;
+	&::before {
+		content: '';
+		width: 50px;
+		height: 4px;
+		background: #f67e7e;
+		position: absolute;
+		margin-top: -54px;
+		flex-shrink: 0;
+	}
+}
+
+.build__section {
+	max-width: 445px;
+}
+
+.build__item {
+	display: flex;
+	&::before {
+		content: '';
+		width: 72px;
+		height: 72px;
+		margin-right: 23px;
+		background: url('../../img/build-section-img.svg') no-repeat;
+		background-position: center;
+		display: inline-block;
+	}
+}
+
+.build__item + .build__item {
+	margin-bottom: 32px;
+	margin-top: 32px;
+}
+
+.build__section-title {
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 28px;
+	color: #f67e7e;
+	margin-bottom: 16px;
+}
+
+.build__section-text {
+	max-width: 445px;
+	font-weight: 600;
+	font-size: 15px;
+	line-height: 25px;
+	color: #ffffff;
+	mix-blend-mode: normal;
+	opacity: 0.8;
+}
+
+@media only screen and (max-width: 1400px) {
+	#build {
+		background-position: right top;
+	}
+}
+
+@media only screen and (max-width: 1311px) {
+	.build__container {
+		flex-direction: column;
+		max-width: 900px;
+	}
+
+	.build__title {
+		max-width: 445px;
+		font-weight: 700;
+		font-size: 32px;
+		line-height: 32px;
+		margin-bottom: 64px;
+	}
+
+	.build__section-text {
+		max-width: 900px;
+	}
+
+	.build__section {
+		max-width: 900px;
+	}
+
+	.build__item {
+		&::before {
+			display: block;
+			flex-shrink: 0;
+		}
+	}
+}
+
+@media only screen and (max-width: 564px) {
+	#build {
+		padding-top: 64px;
+		padding-bottom: 64px;
+	}
+	.build__title {
+		max-width: 250px;
+		padding-top: 64px;
+	}
+
+	.build__item {
+		flex-direction: column;
+		&::before {
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 16px;
+		}
+	}
+	.build__section {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	.build__title {
+		font-size: 32px;
+		line-height: 32px;
+		max-width: 240px;
+	}
+
+	.build__item + .build__item {
+		margin-top: 48px;
+		margin-bottom: 48px;
+	}
+}
